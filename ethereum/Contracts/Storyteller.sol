@@ -10,9 +10,15 @@ contract Storyteller {
         mapping(address => bool) raters;
     }
 
+    struct Profile {
+      string nickname;
+      address userAddress;
+      uint rating;
+    }
+
     Story[] public stories;
+    Profile[] public users;
     address public administrator;
-    address public moderator;
     address[] public moderators;
     mapping(address => bool) public approvers;
 
@@ -37,13 +43,23 @@ contract Storyteller {
       for(uint i = 0; i<moderators.length; i++){
         if(moderators[i] == user){
           return true;
-        }else{
-          continue;
         }
-        return false;
-      }
+              }
+      return false;
     }
 
+    function checkIfUserExist(address user) view public returns (bool){
+      for(uint i=0; i<users.length;i++){
+        if(users[i].userAddress == user){
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function addModerator(address newModerator) public admin {
+      moderators.push(newModerator);
+    }
 
     function createStory(string tittle, string story, address author)
         public {
@@ -63,5 +79,22 @@ contract Storyteller {
         stories.push(newStory);
     }
 
-
-}
+    function createProfile(string nickname,address userAddress) public returns (bool) {
+      if(!checkIfUserExist(userAddress)){
+      /* STRUCT
+      string nickname;
+      address userAddress;
+      uint rating;
+      */
+      Profile memory newUser = Profile({
+        nickname: nickname,
+        userAddress: userAddress,
+        rating: 0
+        });
+      users.push(newUser);
+      return true;
+    }else{
+      return false;
+    }
+  }
+  }
