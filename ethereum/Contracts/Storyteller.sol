@@ -5,7 +5,8 @@ contract Storyteller {
     struct Story {
         string tittle;
         string story;
-        address author;
+        address authorAddress;
+        string authorName;
         uint rating;
         mapping(address => bool) raters;
     }
@@ -13,14 +14,15 @@ contract Storyteller {
     struct Profile {
       string nickname;
       address userAddress;
-      uint rating;
+      uint userRating;
     }
 
     Story[] public stories;
     Profile[] public users;
+    Story[] public userStories;
     address public administrator;
     address[] public moderators;
-    mapping(address => bool) public approvers;
+    mapping(address => Profile) userBase;
 
     //MODIFIERS - USER ACCESS
     //Administrator - the highest tier of access, can appoint and revoke moderators
@@ -34,7 +36,13 @@ contract Storyteller {
 
         _;
     }
+    //User - only users with created accounts are allowed
+    modifier userAcc(){
+        require(checkIfUserExist(msg.sender));
+        _;
+    }
 
+    //Contructor function, does not require any initial props
     function Storyteller() public {
         administrator = msg.sender;
     }
@@ -57,44 +65,56 @@ contract Storyteller {
       return false;
     }
 
+    /* A little nasty workaround as solidity does not allow to return array of
+     structs. this function updates public arrat userStories that can be accessed
+     next */
+    function getUserStories(address user) public {
+        for(uint i =0; i<stories.length;i++){
+            if(stories[i].authorAddress == user){
+                userStories.push(stories[i]);
+            }
+        }
+    }
+
     function addModerator(address newModerator) public admin {
       moderators.push(newModerator);
     }
 
-    function createStory(string tittle, string story, address author)
+    function createStory(string tittle, string story) userAcc
         public {
-            /* STRUCT:
-            string tittle;
-            string story;
-            address author;
-            uint rating;
-            mapping(address => bool) raters;
-            */
+            Profile storage author = userBase[msg.sender];
             Story memory newStory = Story({
                 tittle: tittle,
                 story: story,
-                author: author,
+                authorAddress: author.userAddress,
+                authorName: author.nickname,
                 rating: 0
             });
         stories.push(newStory);
     }
 
-    function createProfile(string nickname,address userAddress) public returns (bool) {
-      if(!checkIfUserExist(userAddress)){
-      /* STRUCT
-      string nickname;
-      address userAddress;
-      uint rating;
-      */
+    function createProfile(string nickname) public returns (bool) {
+      if(!checkIfUserExist(msg.sender)){
       Profile memory newUser = Profile({
         nickname: nickname,
-        userAddress: userAddress,
-        rating: 0
+        userAddress: msg.sender,
+        userRating: 0
         });
       users.push(newUser);
+      userBase[msg.sender] = newUser;
       return true;
     }else{
       return false;
     }
+  }
+
+  function upvoteStory(uint storyIndex) userAcc public {
+    Story storage story = stories[storyIndex];
+    story.rating++;
+  }
+
+  function downvoteStory(uint storyIndex) userAcc public {
+    Story storage story = stories[storyIndex];
+    story.rating--;
   }
   }
