@@ -21,7 +21,6 @@ contract Storyteller {
     Profile[] public users;
     Story[] public userStories;
     address public administrator;
-    address[] public moderators;
     mapping(address => Profile) userBase;
 
     //MODIFIERS - USER ACCESS
@@ -30,12 +29,7 @@ contract Storyteller {
         require(msg.sender == administrator);
         _;
     }
-    //Moderator - User with access to moderate stories, appointed only by administrator
-    modifier moderatorAcc(){
-        require(checkIfModerator(msg.sender));
 
-        _;
-    }
     //User - only users with created accounts are allowed
     modifier userAcc(){
         require(checkIfUserExist(msg.sender));
@@ -46,15 +40,6 @@ contract Storyteller {
     //Contructor function, does not require any initial props
     function Storyteller() public {
         administrator = msg.sender;
-    }
-
-    function checkIfModerator(address user) view public returns (bool){
-      for(uint i = 0; i<moderators.length; i++){
-        if(moderators[i] == user){
-          return true;
-        }
-              }
-      return false;
     }
 
     function checkIfUserExist(address user) view public returns (bool){
@@ -75,10 +60,6 @@ contract Storyteller {
                 userStories.push(stories[i]);
             }
         }
-    }
-
-    function addModerator(address newModerator) public admin {
-      moderators.push(newModerator);
     }
 
     function createStory(string tittle, string story) userAcc
