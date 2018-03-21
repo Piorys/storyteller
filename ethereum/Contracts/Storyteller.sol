@@ -42,6 +42,7 @@ contract Storyteller {
         _;
     }
 
+
     //Contructor function, does not require any initial props
     function Storyteller() public {
         administrator = msg.sender;
@@ -110,11 +111,25 @@ contract Storyteller {
 
   function upvoteStory(uint storyIndex) userAcc public {
     Story storage story = stories[storyIndex];
+    require(!story.raters[msg.sender]);
     story.rating++;
+    upvoteUser(story.authorAddress);
+    story.raters[msg.sender] = true;
   }
 
   function downvoteStory(uint storyIndex) userAcc public {
     Story storage story = stories[storyIndex];
     story.rating--;
+    story.raters[msg.sender] = true;
+  }
+
+  function upvoteUser(address user) private {
+    Profile storage profile = userBase[user];
+    profile.userRating++;
+  }
+
+  function downvoteUser(address user) private {
+    Profile storage profile = userBase[user];
+    profile.userRating--;
   }
   }
