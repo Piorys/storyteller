@@ -2,7 +2,7 @@
   "name": "storyteller",
   "version": "1.0.0",
   "description": "Message board app based on ethereum blockchain",
-  "main": "index.js",
+  "dfain": "index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -19,7 +19,7 @@
   "dependencies": {
     "fs-extra": "^5.0.0",
     "ganache-cli": "^6.0.3",
-    "mocha": "^5.0.2",
+    "mocha": "^5.0.5",
     "next": "^4.1.4",
     "next-routes": "^1.3.0",
     "react": "^16.2.0",
@@ -28,6 +28,6 @@
     "semantic-ui-react": "^0.78.3",
     "solc": "^0.4.20",
     "truffle-hdwallet-provider": "0.0.3",
-    "web3": "^1.0.0-beta.26"
+    "web3": "^1.0.0-beta.33"
   }
 }
