@@ -4,7 +4,8 @@
   "description": "Message board app based on ethereum blockchain",
   "dfain": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
