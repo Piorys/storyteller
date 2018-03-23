@@ -1,2 +1,3 @@
-Address of deployed contract: 0x8A991ee3c873401F249654Be8037823a2F2AEa4f
-As for 23.03.2018 11:07 hrs GMT +!
+Address of deployed contract:
+0x8A991ee3c873401F249654Be8037823a2F2AEa4f
+As for 23.03.2018 11:07 hrs GMT +1
