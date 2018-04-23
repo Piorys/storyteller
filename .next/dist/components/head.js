@@ -8,13 +8,13 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _head = require("next\\dist\\lib\\head.js");
+var _head = require("next/dist/lib/head.js");
 
 var _head2 = _interopRequireDefault(_head);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "C:\\Users\\piotr.ryszewski\\Documents\\Projects\\Storyteller\\components\\head.js";
+var _jsxFileName = "/Users/piotrryszewski/Desktop/Projekty/storyteller/components/head.js";
 
 exports.default = function () {
   return _react2.default.createElement(_head2.default, {
@@ -40,4 +40,4 @@ exports.default = function () {
     }
   }, " Storyteller - the Web 3.0 Story Board "));
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXGhlYWQuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJIZWFkIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxBQUFPOzs7O0FBQ1AsQUFBTyxBQUVQOzs7Ozs7OztrQkFBZSxZQUFNLEFBQ25CO3lCQUNFLEFBQUM7O2dCQUFEO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUE7U0FDRSxBQUNNLEFBQ0o7VUFGRixBQUVPOztnQkFGUDtrQkFERixBQUNFLEFBSUE7QUFKQTtBQUNFLDhDQUdJLEtBQU4sQUFBVSxpQkFBZ0IsTUFBMUIsQUFBK0I7Z0JBQS9CO2tCQUxGLEFBS0UsQUFDQTtBQURBO3NCQUNBLGNBQUE7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQVBKLEFBQ0UsQUFNRSxBQUdMO0FBWEQiLCJmaWxlIjoiaGVhZC5qcyIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy9waW90ci5yeXN6ZXdza2kvRG9jdW1lbnRzL1Byb2plY3RzL1N0b3J5dGVsbGVyIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvaGVhZC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkhlYWQiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFPLEFBRVA7Ozs7Ozs7O2tCQUFlLFlBQU0sQUFDbkI7eUJBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQTtTQUNFLEFBQ00sQUFDSjtVQUZGLEFBRU87O2dCQUZQO2tCQURGLEFBQ0UsQUFJQTtBQUpBO0FBQ0UsOENBR0ksS0FBTixBQUFVLGlCQUFnQixNQUExQixBQUErQjtnQkFBL0I7a0JBTEYsQUFLRSxBQUNBO0FBREE7c0JBQ0EsY0FBQTs7Z0JBQUE7a0JBQUE7QUFBQTtBQUFBLEtBUEosQUFDRSxBQU1FLEFBR0w7QUFYRCIsImZpbGUiOiJoZWFkLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waW90cnJ5c3pld3NraS9EZXNrdG9wL1Byb2pla3R5L3N0b3J5dGVsbGVyIn0=
