@@ -1,4 +1,4 @@
-import React, { Componend } from "react";
+import React, {Componend} from "react";
 
 class NewStory extends Component {
   render() {

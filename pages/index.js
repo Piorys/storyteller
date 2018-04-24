@@ -1,21 +1,23 @@
-import React, { Component } from "react";
-import { Card, Button, Form, TextArea } from "semantic-ui-react";
+import React, {Component} from "react";
+import {
+  Card,
+  Button,
+  Form,
+  TextArea,
+  Segment,
+  Divider
+} from "semantic-ui-react";
 import Layout from "../components/layout";
+import NewStory from "../components/NewStory";
 
 class StoriesIndex extends Component {
   render() {
     return (
       <Layout>
-      <div>
-      <h1> Tell Your Story </h1>
-        <Form>
-          <Form.Input fuild label='Title' placeholder='Title'/>
-          <TextArea placeholder="What's on your mind?"/>
-          <Form.Button> Submit</Form.Button>
-        </Form>
+        <NewStory />
+        <div>
+          <h1> The feed </h1>
         </div>
-
-
       </Layout>
     );
   }

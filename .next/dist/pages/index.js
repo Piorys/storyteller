@@ -34,6 +34,10 @@ var _layout = require("../components/layout");
 
 var _layout2 = _interopRequireDefault(_layout);
 
+var _NewStory = require("../components/NewStory");
+
+var _NewStory2 = _interopRequireDefault(_NewStory);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = "/Users/piotrryszewski/Desktop/Projekty/storyteller/pages/index.js?entry";
@@ -54,37 +58,24 @@ var StoriesIndex = function (_Component) {
       return _react2.default.createElement(_layout2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 16
         }
-      }, _react2.default.createElement("div", {
+      }, _react2.default.createElement(_NewStory2.default, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 17
+        }
+      }), _react2.default.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
         }
       }, _react2.default.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 19
         }
-      }, " Tell Your Story "), _react2.default.createElement(_semanticUiReact.Form, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        }
-      }, _react2.default.createElement(_semanticUiReact.Form.Input, { fuild: true, label: "Title", placeholder: "Title", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      }), _react2.default.createElement(_semanticUiReact.TextArea, { placeholder: "What's on your mind?", __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        }
-      }), _react2.default.createElement(_semanticUiReact.Form.Button, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        }
-      }, " Submit"))));
+      }, " The feed ")));
     }
   }]);
 
@@ -92,4 +83,4 @@ var StoriesIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = StoriesIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsIkZvcm0iLCJUZXh0QXJlYSIsIkxheW91dCIsIlN0b3JpZXNJbmRleCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUyxBQUFNLEFBQVEsQUFBTTs7QUFDN0IsQUFBTyxBQUFZOzs7Ozs7Ozs7SSxBQUViOzs7Ozs7Ozs7Ozs2QkFDSyxBQUNQOzZCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0E7QUFEQTtBQUFBLE9BQUEsa0JBQ0EsY0FBQTs7b0JBQUE7c0JBQUEsQUFDQTtBQURBO0FBQUEseUJBQ0EsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBREEsQUFDQSxBQUNFLHNDQUFBLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHVDQUNFLEFBQUMsc0JBQUQsQUFBTSxTQUFNLE9BQVosTUFBa0IsT0FBbEIsQUFBd0IsU0FBUSxhQUFoQyxBQUE0QztvQkFBNUM7c0JBREYsQUFDRSxBQUNBO0FBREE7MEJBQ0EsQUFBQywyQ0FBUyxhQUFWLEFBQXNCO29CQUF0QjtzQkFGRixBQUVFLEFBQ0E7QUFEQTswQkFDQyxjQUFELHNCQUFBLEFBQU07O29CQUFOO3NCQUFBO0FBQUE7QUFBQSxTQVBOLEFBQ0UsQUFDQSxBQUVFLEFBR0UsQUFPUDs7Ozs7QUFoQndCLEEsQUFrQjNCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waW90cnJ5c3pld3NraS9EZXNrdG9wL1Byb2pla3R5L3N0b3J5dGVsbGVyIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiQ2FyZCIsIkJ1dHRvbiIsIkZvcm0iLCJUZXh0QXJlYSIsIlNlZ21lbnQiLCJEaXZpZGVyIiwiTGF5b3V0IiwiTmV3U3RvcnkiLCJTdG9yaWVzSW5kZXgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFROzs7O0FBQ2YsQUFDRSxBQUNBLEFBQ0EsQUFDQSxBQUNBLEFBQ0E7O0FBRUYsQUFBTyxBQUFZOzs7O0FBQ25CLEFBQU8sQUFBYzs7Ozs7Ozs7O0lBRWYsQTs7Ozs7Ozs7Ozs7NkJBQ0ssQUFDUDs2QkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUM7O29CQUFEO3NCQURGLEFBQ0UsQUFDQTtBQURBO0FBQUEsMEJBQ0EsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRTtBQURGO0FBQUEseUJBQ0UsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBSk4sQUFDRSxBQUVFLEFBQ0UsQUFJUDs7Ozs7QUFWd0IsQSxBQVkzQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvcGlvdHJyeXN6ZXdza2kvRGVza3RvcC9Qcm9qZWt0eS9zdG9yeXRlbGxlciJ9
