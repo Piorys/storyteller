@@ -12,7 +12,7 @@ var _semanticUiReact = require("semantic-ui-react");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = "/Users/piotrryszewski/Desktop/Projekty/storyteller/components/NewStory.js";
+var _jsxFileName = "C:\\Users\\piotr.ryszewski\\Documents\\Projects\\Storyteller\\components\\NewStory.js";
 
 exports.default = function (props) {
   return _react2.default.createElement("div", {
@@ -34,22 +34,36 @@ exports.default = function (props) {
       fileName: _jsxFileName,
       lineNumber: 16
     }
-  }, "Tell your story"), _react2.default.createElement(_semanticUiReact.Form.Input, { fuild: true, placeholder: "Title", __source: {
+  }, "Tell your story"), _react2.default.createElement(_semanticUiReact.Form.Input, {
+    fuild: true,
+    placeholder: "Title",
+    style: {
+      marginTop: "10px"
+    },
+    __source: {
       fileName: _jsxFileName,
       lineNumber: 17
     }
   }), _react2.default.createElement(_semanticUiReact.Divider, { horizontal: true, __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 24
     }
   }), _react2.default.createElement(_semanticUiReact.TextArea, { placeholder: "What's on your mind?", __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     }
-  }), _react2.default.createElement(_semanticUiReact.Button, { icon: "plus", primary: true, content: "Submit", labelPosition: "right", __source: {
+  }), _react2.default.createElement(_semanticUiReact.Button, {
+    icon: "plus",
+    primary: true,
+    content: "Submit",
+    labelPosition: "right",
+    style: {
+      marginTop: "10px"
+    },
+    __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 26
     }
   }))));
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTmV3U3RvcnkuanMiXSwibmFtZXMiOlsiUmVhY3QiLCJDYXJkIiwiQnV0dG9uIiwiRm9ybSIsIlRleHRBcmVhIiwiU2VnbWVudCIsIkRpdmlkZXIiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUNFLEFBQ0EsQUFDQSxBQUNBLEFBQ0EsQUFDQSxBQUdGOzs7Ozs7a0JBQWUsaUJBQVMsQUFDdEI7eUJBQ0UsY0FBQTs7Z0JBQUE7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQSxrQkFDRSxBQUFDOztnQkFBRDtrQkFBQSxBQUNFO0FBREY7QUFBQSxxQkFDRSxBQUFDOztnQkFBRDtrQkFBQSxBQUNFO0FBREY7QUFBQSxxQkFDRSxBQUFDLDBDQUFRLFlBQVQ7Z0JBQUE7a0JBQUE7QUFBQTtLQURGLEFBQ0UsQUFDQSxrREFBQSxBQUFDLHNCQUFELEFBQU0sU0FBTSxPQUFaLE1BQWtCLGFBQWxCLEFBQThCO2dCQUE5QjtrQkFGRixBQUVFLEFBQ0E7QUFEQTtzQkFDQSxBQUFDLDBDQUFRLFlBQVQ7Z0JBQUE7a0JBSEYsQUFHRSxBQUNBO0FBREE7c0JBQ0EsQUFBQywyQ0FBUyxhQUFWLEFBQXNCO2dCQUF0QjtrQkFKRixBQUlFLEFBQ0E7QUFEQTtzQkFDQSxBQUFDLHlDQUFPLE1BQVIsQUFBYSxRQUFPLFNBQXBCLE1BQTRCLFNBQTVCLEFBQW9DLFVBQVMsZUFBN0MsQUFBMkQ7Z0JBQTNEO2tCQVJSLEFBQ0UsQUFDRSxBQUNFLEFBS0UsQUFLVDtBQUxTOztBQVRWIiwiZmlsZSI6Ik5ld1N0b3J5LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9waW90cnJ5c3pld3NraS9EZXNrdG9wL1Byb2pla3R5L3N0b3J5dGVsbGVyIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHNcXE5ld1N0b3J5LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ2FyZCIsIkJ1dHRvbiIsIkZvcm0iLCJUZXh0QXJlYSIsIlNlZ21lbnQiLCJEaXZpZGVyIiwibWFyZ2luVG9wIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxBQUFPOzs7O0FBQ1AsQUFDRSxBQUNBLEFBQ0EsQUFDQSxBQUNBLEFBQ0EsQUFHRjs7Ozs7O2tCQUFlLGlCQUFTLEFBQ3RCO3lCQUNFLGNBQUE7O2dCQUFBO2tCQUFBLEFBQ0U7QUFERjtBQUFBLEdBQUEsa0JBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEscUJBQ0UsQUFBQzs7Z0JBQUQ7a0JBQUEsQUFDRTtBQURGO0FBQUEscUJBQ0UsQUFBQywwQ0FBUSxZQUFUO2dCQUFBO2tCQUFBO0FBQUE7S0FERixBQUNFLEFBQ0Esa0RBQUEsQUFBQyxzQkFBRCxBQUFNO1dBQU4sQUFFRTtpQkFGRixBQUVjLEFBQ1o7O2lCQUhGLEFBR1MsQUFDTTtBQUROLEFBQ0w7O2dCQUpKO2tCQUZGLEFBRUUsQUFPQTtBQVBBO0FBQ0Usc0JBTUYsQUFBQywwQ0FBUSxZQUFUO2dCQUFBO2tCQVRGLEFBU0UsQUFDQTtBQURBO3NCQUNBLEFBQUMsMkNBQVMsYUFBVixBQUFzQjtnQkFBdEI7a0JBVkYsQUFVRSxBQUNBO0FBREE7c0JBQ0EsQUFBQztVQUFELEFBQ08sQUFDTDthQUZGLEFBR0U7YUFIRixBQUdVLEFBQ1I7bUJBSkYsQUFJZ0IsQUFDZDs7aUJBTEYsQUFLUyxBQUNNO0FBRE4sQUFDTDs7Z0JBTko7a0JBZFIsQUFDRSxBQUNFLEFBQ0UsQUFXRSxBQWFUO0FBYlM7QUFDRTtBQWhCWiIsImZpbGUiOiJOZXdTdG9yeS5qcyIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy9waW90ci5yeXN6ZXdza2kvRG9jdW1lbnRzL1Byb2plY3RzL1N0b3J5dGVsbGVyIn0=

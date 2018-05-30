@@ -14,10 +14,24 @@ export default props => {
       <Segment>
         <Form>
           <Divider horizontal>Tell your story</Divider>
-          <Form.Input fuild placeholder="Title" />
+          <Form.Input
+            fuild
+            placeholder="Title"
+            style={{
+              marginTop: "10px"
+            }}
+          />
           <Divider horizontal />
           <TextArea placeholder="What's on your mind?" />
-          <Button icon="plus" primary content="Submit" labelPosition="right" />
+          <Button
+            icon="plus"
+            primary
+            content="Submit"
+            labelPosition="right"
+            style={{
+              marginTop: "10px"
+            }}
+          />
         </Form>
       </Segment>
     </div>
