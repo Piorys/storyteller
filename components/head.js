@@ -17,7 +17,7 @@ export default () => {
       </Head>
       <style jsx global>{`
         body {
-          background: #4e79bf;
+          background: #3e4c63;
         }
       `}</style>
     </div>
