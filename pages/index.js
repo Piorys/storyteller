@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
   Card,
   Button,
@@ -9,15 +9,15 @@ import {
 } from "semantic-ui-react";
 import Layout from "../components/layout";
 import NewStory from "../components/NewStory";
+import Story from "../components/story.js";
 
 class StoriesIndex extends Component {
   render() {
     return (
       <Layout>
         <NewStory />
-        <div>
-          <h1> The feed </h1>
-        </div>
+        <Divider/>
+        <Story />
       </Layout>
     );
   }
