@@ -75,9 +75,31 @@ var StoriesIndex = function (_Component) {
           lineNumber: 19
         }
       }), _react2.default.createElement(_story2.default, {
+        title: "Was your day bad?",
+        story: "My day started with hearing argument between by gf and crazy neightboor",
+        author: "Piorys",
+        rating: "4",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
+        }
+      }), _react2.default.createElement(_story2.default, {
+        title: "I had a good sandwitch",
+        story: "Sandwitch was pretty good I guess",
+        author: "Sarah",
+        rating: "2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
+      }), _react2.default.createElement(_story2.default, {
+        title: "Look at my pizza!",
+        story: "My pizza was quite nice",
+        author: "Piorys",
+        rating: "1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
         }
       }));
     }
@@ -87,4 +109,4 @@ var StoriesIndex = function (_Component) {
 }(_react.Component);
 
 exports.default = StoriesIndex;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkNhcmQiLCJCdXR0b24iLCJGb3JtIiwiVGV4dEFyZWEiLCJTZWdtZW50IiwiRGl2aWRlciIsIkxheW91dCIsIk5ld1N0b3J5IiwiU3RvcnkiLCJTdG9yaWVzSW5kZXgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQ0UsQUFDQSxBQUNBLEFBQ0EsQUFDQSxBQUNBOztBQUVGLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTyxBQUFXOzs7Ozs7Ozs7SUFFWixBOzs7Ozs7Ozs7Ozs2QkFDSyxBQUNQOzZCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsQUFBQzs7b0JBQUQ7c0JBREYsQUFDRSxBQUNBO0FBREE7QUFBQSwwQkFDQSxBQUFDOztvQkFBRDtzQkFGRixBQUVFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7O29CQUFEO3NCQUpKLEFBQ0UsQUFHRSxBQUdMO0FBSEs7QUFBQTs7Ozs7QUFObUIsQSxBQVczQjs7a0JBQUEsQUFBZSIsImZpbGUiOiJpbmRleC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiJDOi9Vc2Vycy9waW90ci5yeXN6ZXdza2kvRG9jdW1lbnRzL1Byb2plY3RzL1N0b3J5dGVsbGVyIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkNhcmQiLCJCdXR0b24iLCJGb3JtIiwiVGV4dEFyZWEiLCJTZWdtZW50IiwiRGl2aWRlciIsIkxheW91dCIsIk5ld1N0b3J5IiwiU3RvcnkiLCJTdG9yaWVzSW5kZXgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQ0UsQUFDQSxBQUNBLEFBQ0EsQUFDQSxBQUNBOztBQUVGLEFBQU8sQUFBWTs7OztBQUNuQixBQUFPLEFBQWM7Ozs7QUFDckIsQUFBTyxBQUFXOzs7Ozs7Ozs7SUFFWixBOzs7Ozs7Ozs7Ozs2QkFDSyxBQUNQOzZCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLE9BQUEsa0JBQ0UsQUFBQzs7b0JBQUQ7c0JBREYsQUFDRSxBQUNBO0FBREE7QUFBQSwwQkFDQSxBQUFDOztvQkFBRDtzQkFGRixBQUVFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7ZUFBRCxBQUNRLEFBQ047ZUFGRixBQUVRLEFBQ047Z0JBSEYsQUFHUyxBQUNQO2dCQUpGLEFBSVM7O29CQUpUO3NCQUhGLEFBR0UsQUFNQTtBQU5BO0FBQ0UsMEJBS0YsQUFBQztlQUFELEFBQ1EsQUFDTjtlQUZGLEFBRVEsQUFDTjtnQkFIRixBQUdTLEFBQ1A7Z0JBSkYsQUFJUzs7b0JBSlQ7c0JBVEYsQUFTRSxBQU1BO0FBTkE7QUFDRSwwQkFLRixBQUFDO2VBQUQsQUFDUSxBQUNOO2VBRkYsQUFFUSxBQUNOO2dCQUhGLEFBR1MsQUFDUDtnQkFKRixBQUlTOztvQkFKVDtzQkFoQkosQUFDRSxBQWVFLEFBUUw7QUFSSztBQUNFOzs7OztBQW5CaUIsQSxBQTRCM0I7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovVXNlcnMvcGlvdHIucnlzemV3c2tpL0RvY3VtZW50cy9Qcm9qZWN0cy9TdG9yeXRlbGxlciJ9

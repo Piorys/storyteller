@@ -16,8 +16,25 @@ class StoriesIndex extends Component {
     return (
       <Layout>
         <NewStory />
-        <Divider/>
-        <Story />
+        <Divider />
+        <Story
+          title="Was your day bad?"
+          story="My day started with hearing argument between by gf and crazy neightboor"
+          author="Piorys"
+          rating="4"
+        />
+        <Story
+          title="I had a good sandwitch"
+          story="Sandwitch was pretty good I guess"
+          author="Sarah"
+          rating="2"
+        />
+        <Story
+          title="Look at my pizza!"
+          story="My pizza was quite nice"
+          author="Piorys"
+          rating="1"
+        />
       </Layout>
     );
   }
