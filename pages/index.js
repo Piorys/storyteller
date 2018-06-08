@@ -19,7 +19,7 @@ class StoriesIndex extends Component {
         <Divider />
         <Story
           title="Was your day bad?"
-          story="My day started with hearing argument between by gf and crazy neightboor"
+          story="Not at all tbh :)"
           author="Piorys"
           rating="4"
         />
