@@ -22,6 +22,7 @@ contract Storyteller {
     Story[] public userStories;
     address public administrator;
     mapping(address => Profile) userBase;
+    uint public storyCount;
 
     //MODIFIERS - USER ACCESS
     //Administrator - the highest tier of access, can appoint and revoke moderators
@@ -73,6 +74,7 @@ contract Storyteller {
                 rating: 0
             });
         stories.push(newStory);
+        storyCount++;
     }
 
     function createProfile(string nickname) public returns (bool) {

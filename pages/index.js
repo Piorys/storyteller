@@ -14,7 +14,8 @@ import contract from "../ethereum/storyteller";
 
 class StoriesIndex extends Component {
   static async getInitialProps() {
-    const stories = await contract.methods.stories("0").call();
+    let storiesCount = await contract.methods.storyCount().call();
+    const stories = await contract.methods.stories("1").call();
     return { stories };
   }
 
