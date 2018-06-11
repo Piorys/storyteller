@@ -15,12 +15,19 @@ import contract from "../ethereum/storyteller";
 class StoriesIndex extends Component {
   static async getInitialProps() {
     let storiesCount = await contract.methods.storyCount().call();
-    const stories = await contract.methods.stories("1").call();
-    return { stories };
+    let stories = [];
+    for (var i = 0; i < storiesCount; i++) {
+      var count = i.toString();
+      var story = await contract.methods.stories(count).call();
+      stories.push(story);
+    }
+    return stories;
   }
 
-  renderStories() {
-    const items = this.props.stories;
+  async renderStories() {
+    const items = await this.props.stories;
+    console.log(items);
+
     return (
       <Story
         title={items.tittle}
