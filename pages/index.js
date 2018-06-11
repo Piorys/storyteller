@@ -13,15 +13,21 @@ import Story from "../components/story.js";
 import contract from "../ethereum/storyteller";
 
 class StoriesIndex extends Component {
-
   static async getInitialProps() {
     const stories = await contract.methods.stories("0").call();
     return { stories };
   }
 
-  renderStories(){
+  renderStories() {
     const items = this.props.stories;
-    console.log(items);
+    return (
+      <Story
+        title={items.tittle}
+        story={items.story}
+        author={items.authorName}
+        rating={items.rating}
+      />
+    );
   }
 
   render() {
@@ -29,13 +35,7 @@ class StoriesIndex extends Component {
       <Layout>
         <NewStory />
         <Divider />
-        <Story
-          title={this.props.stories.tittle}
-          story={this.props.stories.story}
-          author={this.props.stories.authorName}
-          rating={this.props.stories.rating}
-        />
-      <Button content="Get Stories!" primary onClick={()=>this.renderStories()}/>
+        {this.renderStories()}
       </Layout>
     );
   }
