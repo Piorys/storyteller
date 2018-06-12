@@ -15,7 +15,6 @@ export default props => {
         <Form>
           <Divider horizontal>Tell your story</Divider>
           <Form.Input
-            fuild
             placeholder="Title"
             style={{
               marginTop: "10px"
