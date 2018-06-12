@@ -14,21 +14,32 @@ import contract from "../ethereum/storyteller";
 
 class StoriesIndex extends Component {
   static async getInitialProps() {
-    let storiesCount = await contract.methods.storyCount().call();
-    const stories = await contract.methods.stories("1").call();
+    const storiesCount = await contract.methods.storyCount().call();
+    let stories = [];
+    for (var i = 0; i < storiesCount; i++) {
+      var count = i.toString();
+      var story = await contract.methods.stories(count).call();
+      stories.push(story);
+    }
     return { stories };
   }
 
   renderStories() {
-    const items = this.props.stories;
-    return (
-      <Story
-        title={items.tittle}
-        story={items.story}
-        author={items.authorName}
-        rating={items.rating}
-      />
-    );
+    const data = this.props.stories.map(story => {
+      return {
+        description: (
+          <Story
+            title={story.tittle}
+            story={story.story}
+            author={story.authorName}
+            rating={story.rating}
+          />
+      ),
+        fluid: true
+      };
+    });
+    console.log(data);
+    return <Card.Group items={data} />
   }
 
   render() {

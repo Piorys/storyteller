@@ -7,7 +7,8 @@ export default props => {
   return (
     <Container>
       <Head />
-      <Header /> {props.children}{" "}
+      <Header />
+      {props.children}
     </Container>
   );
 };
