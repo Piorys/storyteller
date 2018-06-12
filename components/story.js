@@ -11,7 +11,7 @@ import {
 
 export default props => {
   return (
-    <Segment>
+    <Container>
       <Container textAlign="center">
         <Header size="medium"> {props.title}</Header>
         <Label attached="top right" color="green">{props.rating}</Label>
@@ -22,10 +22,10 @@ export default props => {
         {props.story}
       </p>
       </Container>
-      <Divider />
+      <Divider/>
       <Button content="Upvote" icon="arrow circle up" color="green"/>
       <Button content="Downvote" icon="arrow circle down" color="orange"/>
       <Label attached="bottom right">{props.author}</Label>
-    </Segment>
+    </Container>
   );
 };
