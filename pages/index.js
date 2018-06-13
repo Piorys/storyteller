@@ -38,7 +38,6 @@ class StoriesIndex extends Component {
         fluid: true
       };
     });
-    console.log(data);
     return <Card.Group items={data} />
   }
 
