@@ -39,7 +39,7 @@ class StoriesIndex extends Component {
         fluid: true
       };
     });
-    return <Card.Group items={data} />
+    return <Card.Group items={data} itemsPerRow="3" textAlign="center" />
   }
 
   render() {

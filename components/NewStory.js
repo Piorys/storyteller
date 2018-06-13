@@ -16,25 +16,63 @@ class NewStory extends Component {
     errorMsg: "",
     loading: false,
     storyTittle: "",
-    storyContent: ""
+    storyContent: "",
+    storyErrMsg: "",
+    tittleErrMsg: "",
+    contentValid: true
   };
 
   onSubmit = async event => {
     event.preventDefault();
     this.setState({ loading: true, errorMsg: "" });
-    try {
-      const accounts = await web3.eth.getAccounts();
-      await contract.methods
-        .createStory(this.state.storyTittle, this.state.storyContent)
-        .send({
-          from: accounts[0]
-        });
-    } catch (error) {
-      this.setState({ errorMsg: error.message });
-      console.log("Error was thrown, detailed description below:");
-      console.error(error);
+    if (this.state.contentValid) {
+      try {
+        const accounts = await web3.eth.getAccounts();
+        await contract.methods
+          .createStory(this.state.storyTittle, this.state.storyContent)
+          .send({
+            from: accounts[0]
+          });
+      } catch (error) {
+        this.setState({ errorMsg: error.message });
+        console.log("Error was thrown, detailed description below:");
+        console.error(error);
+      }
+      this.setState({ loading: false });
     }
     this.setState({ loading: false });
+  };
+
+  validateStoryLength = async event => {
+    event.preventDefault();
+    let message = event.target.value;
+    message.replace(/\s+/, "");
+    if (message.length > 255) {
+      this.setState({
+        errorMsg:
+          this.state.errorMsg + " Text can't be longer than 255 characters"
+      });
+    } else {
+      this.setState({
+        storyContent: event.target.value,
+        contentValid: false
+      });
+    }
+  };
+
+  validateTittleLength = async event => {
+    event.preventDefault();
+    let message = event.target.value;
+    message.replace(/\s+/, "");
+    if (message.length > 50) {
+      this.setState({
+        errorMsg:
+          this.state.errorMsg + " Text can't be longer than 50 characters",
+        contentValid: false
+      });
+    } else {
+      this.setState({ storyTittle: event.target.value });
+    }
   };
 
   render() {
@@ -49,19 +87,15 @@ class NewStory extends Component {
                 marginTop: "10px"
               }}
               value={this.state.storyTittle}
-              onChange={event =>
-                this.setState({ storyTittle: event.target.value })
-              }
+              onChange={this.validateTittleLength}
             />
             <Divider horizontal />
             <TextArea
               placeholder="What's on your mind?"
               value={this.state.storyContent}
-              onChange={event =>
-                this.setState({ storyContent: event.target.value })
-              }
+              onChange={this.validateStoryLength}
             />
-          <Message error header="Oops!" content={this.state.errorMsg} />
+            <Message error header="Oops!" content={this.state.errorMsg} />
             <Button
               icon="plus"
               loading={this.state.loading}
