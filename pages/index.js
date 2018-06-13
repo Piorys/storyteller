@@ -35,11 +35,11 @@ class StoriesIndex extends Component {
             author={story.authorName}
             rating={story.rating}
           />
-      ),
+        ),
         fluid: true
       };
     });
-    return <Card.Group items={data} />
+    return <Card.Group items={data} itemsPerRow="2" textAlign="center" />;
   }
 
   render() {
