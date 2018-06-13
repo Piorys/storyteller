@@ -21,6 +21,7 @@ class StoriesIndex extends Component {
       var story = await contract.methods.stories(count).call();
       stories.push(story);
     }
+    stories.reverse();
     return { stories };
   }
 
