@@ -10,6 +10,7 @@ import {
 } from "semantic-ui-react";
 import contract from "../ethereum/storyteller";
 import web3 from "../ethereum/web3";
+import {Router} from "../routes";
 
 class NewStory extends Component {
   state = {
@@ -35,6 +36,7 @@ class NewStory extends Component {
       console.error(error);
     }
     this.setState({ loading: false });
+    Router.pushRoute('/');
   };
 
   render() {
@@ -44,7 +46,7 @@ class NewStory extends Component {
           <Form onSubmit={this.onSubmit} error={!!this.state.errorMsg}>
             <Divider horizontal>Tell your story</Divider>
             <Form.Input
-              placeholder="Title"
+              placeholder="Title (max 50)"
               style={{
                 marginTop: "10px"
               }}
@@ -55,7 +57,7 @@ class NewStory extends Component {
             />
             <Divider horizontal />
             <TextArea
-              placeholder="What's on your mind?"
+              placeholder="What's on your mind? (max 255)"
               value={this.state.storyContent}
               onChange={event =>
                 this.setState({ storyContent: event.target.value })

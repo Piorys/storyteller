@@ -18,14 +18,17 @@ export default props => {
       defaultOpen="true"
       dimmer="blurring"
       centered="true"
+      closeIcon="true"
+      closeOnDimmerClick="true"
     >
-    <Modal.Content image>
-      <Image size="small" src="https://metamask.io/img/metamask.png" />
+      <Modal.Content image>
+        <Image size="small" src="https://metamask.io/img/metamask.png" />
         <Modal.Description>
-          <Header>Please Log In</Header>
+          <Header>Welcome!</Header>
           <Divider />
           <p> Metamask successfully identified </p>
-          <p> Please Log In to continue and refresh this page </p>
+          <p> Your address is: {props.address}</p>
+          <p> Close this window to continue </p>
         </Modal.Description>
       </Modal.Content>
     </Modal>

@@ -22,11 +22,11 @@ class ModalNoMetamask extends Component {
 
   render() {
     return (
-      <Modal open={!this.state.isLoggedIn} dimmer="blurring" centered="true">
+      <Modal defaultOpen="true" dimmer="blurring" centered="true">
         <Modal.Content image>
           <Image size="small" src="https://metamask.io/img/metamask.png" />
           <Modal.Description>
-            <Header>Hello There!</Header>
+            <Header>Metamask not found</Header>
             <Divider />
             <p> Looks like you are not using Metamask </p>
             <p>
