@@ -3,7 +3,7 @@ import contract from "../ethereum/storyteller";
 import web3 from "../ethereum/web3";
 import ModalNoMetamask from "../components/NoMetamask";
 import ModalNotLoggedIn from "../components/NotLoggedIn";
-import ModalLoggedIn from "../components/ModalLoggedIn.js";
+import ModalLoggedInNoAcc from "../components/ModalLoggedInNoAcc.js";
 
 class Landing extends Component {
   state = {
@@ -28,7 +28,7 @@ class Landing extends Component {
     } else if (this.state.accounts.length === 0) {
       return <ModalNotLoggedIn />;
     } else {
-      return <ModalLoggedIn address={this.state.accounts[0]} />;
+      return <ModalLoggedInNoAcc address={this.state.accounts[0]} />;
     }
   }
 }

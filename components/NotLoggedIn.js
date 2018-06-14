@@ -15,7 +15,7 @@ import {
 export default props => {
   return (
     <Modal
-      defaultOpen="true"
+      defaultOpen
       dimmer="blurring"
       centered="true"
     >

@@ -22,7 +22,7 @@ class ModalNoMetamask extends Component {
 
   render() {
     return (
-      <Modal defaultOpen="true" dimmer="blurring" centered="true">
+      <Modal defaultOpen dimmer="blurring" centered="true">
         <Modal.Content image>
           <Image size="small" src="https://metamask.io/img/metamask.png" />
           <Modal.Description>

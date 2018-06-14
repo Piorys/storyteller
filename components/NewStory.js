@@ -10,15 +10,48 @@ import {
 } from "semantic-ui-react";
 import contract from "../ethereum/storyteller";
 import web3 from "../ethereum/web3";
-import {Router} from "../routes";
+import { Router } from "../routes";
 
 class NewStory extends Component {
   state = {
     errorMsg: "",
     loading: false,
     storyTittle: "",
-    storyContent: ""
+    storyContent: "",
+    hasProfile: false,
+    profile: {},
+    accounts: []
   };
+
+  setStateAsync(state) {
+    return new Promise(resolve => {
+      this.setState(state, resolve);
+    });
+  }
+
+  async componentDidMount() {
+    const accounts = await web3.eth.getAccounts();
+    const hasProfile = await contract.methods.checkIfUserExist(accounts[0]);
+    await this.setStateAsync({
+      accounts: accounts,
+      hasProfile: hasProfile
+    });
+  }
+
+  async checkUser() {
+    if (hasProfile === true) {
+      console.log("hasProfile");
+      const profile = await contract.methods.userBase(accounts[0]);
+      await this.setStateAsync({
+        hasProfile: true,
+        profile: profile
+      });
+    } else {
+      await this.setStateAsync({
+        hasProfile: false
+      });
+    }
+  }
 
   onSubmit = async event => {
     event.preventDefault();
@@ -36,10 +69,12 @@ class NewStory extends Component {
       console.error(error);
     }
     this.setState({ loading: false });
-    Router.pushRoute('/');
+    Router.pushRoute("/");
   };
 
   render() {
+    console.log(this.state.hasProfile);
+    console.log(this.state.accounts);
     return (
       <div>
         <Segment>
@@ -63,7 +98,7 @@ class NewStory extends Component {
                 this.setState({ storyContent: event.target.value })
               }
             />
-          <Message error header="Oops!" content={this.state.errorMsg} />
+            <Message error header="Oops!" content={this.state.errorMsg} />
             <Button
               icon="plus"
               loading={this.state.loading}
