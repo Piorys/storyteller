@@ -9,6 +9,7 @@ contract Storyteller {
         string authorName;
         uint rating;
         mapping(address => bool) raters;
+        uint id;
     }
 
     struct Profile {
@@ -66,15 +67,20 @@ contract Storyteller {
     function createStory(string tittle, string story) userAcc
         public {
             Profile storage author = userBase[msg.sender];
-            Story memory newStory = Story({
-                tittle: tittle,
-                story: story,
-                authorAddress: author.userAddress,
-                authorName: author.nickname,
-                rating: 0
-            });
-        stories.push(newStory);
-        storyCount++;
+            if(bytes(story).length < 255 && bytes(tittle).length < 50){
+              Story memory newStory = Story({
+                  tittle: tittle,
+                  story: story,
+                  authorAddress: author.userAddress,
+                  authorName: author.nickname,
+                  rating: 0,
+                  id: storyCount+1
+              });
+          stories.push(newStory);
+          storyCount++;
+            }else{
+              revert();
+            }
     }
 
     function createProfile(string nickname) public returns (bool) {
