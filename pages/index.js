@@ -7,10 +7,18 @@ import {
   Segment,
   Divider
 } from "semantic-ui-react";
+
+//Components
 import Layout from "../components/layout";
 import NewStory from "../components/NewStory";
 import Story from "../components/story.js";
-import contract from "../ethereum/storyteller";
+import Landing from "../components/landing.js";
+
+//Ethereum
+import contract from "../ethereum/storyteller.js";
+import web3 from "../ethereum/web3";
+
+
 
 class StoriesIndex extends Component {
   static async getInitialProps() {
@@ -45,6 +53,7 @@ class StoriesIndex extends Component {
   render() {
     return (
       <Layout>
+        <Landing/>
         <NewStory />
         <Divider />
         {this.renderStories()}
